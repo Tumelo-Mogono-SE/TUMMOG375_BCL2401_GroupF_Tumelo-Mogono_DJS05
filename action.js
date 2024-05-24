@@ -13,3 +13,7 @@ export const subtractAction = () => {
 export const resetAction = () => {
     return { type: RESET };
 };
+
+export const getState = () => {
+    console.log(state.value);
+}
