@@ -1,0 +1,9 @@
+{
+    "name": "djs05",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "script.js",
+    "scripts": {
+      "start": "node script.js"
+    }
+  }
