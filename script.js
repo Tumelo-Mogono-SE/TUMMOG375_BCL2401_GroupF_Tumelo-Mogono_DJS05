@@ -1,19 +1,25 @@
-import { dispatch } from "./store.js";
-import { addAction, subtractAction, resetAction, getState } from "./action.js";
+import { dispatch, subscribe, getState } from "./store.js";
+import { addAction, subtractAction, resetAction } from "./action.js";
 
 
+const logStateChanges = (prev, current) => {
+    console.log("Previous state:", prev);
+    console.log("Current state:", current);
+}
 
-getState();
+
+console.log("Initial state value is:", getState().value);
+subscribe(logStateChanges)
 
 dispatch(addAction());
 dispatch(addAction());
 
-getState();
+console.log("State after ADD action, value is:",getState().value);
 
 dispatch(subtractAction());
 
-getState();
+console.log("State after Substract action, value is:", getState().value);
 
 dispatch(resetAction());
 
-getState();
+console.log("State after RESET action, value is:", getState().value); 
