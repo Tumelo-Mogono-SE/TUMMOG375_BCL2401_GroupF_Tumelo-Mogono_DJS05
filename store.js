@@ -22,3 +22,7 @@ export const subscribe = (notify) => {
 
     return unsubscribe;
 }
+
+export const getState = () => {
+    return state;
+}
